@@ -1,0 +1,56 @@
+.menu-wrap {
+  display:flex;
+  justify-content: space-between;
+  @include tab {
+      flex-direction:column;
+  }
+}
+.menu-item {
+   width:25%;
+   @include tab {
+       width:100%;
+   }
+   &_img {
+      overflow: hidden;
+      &-sp {
+         display:none;
+         @include tab {
+            display:block;
+            width:100%;
+            &:hover {
+              @include hover;
+           }
+         }
+      }
+      &-pc {
+       width:100%;
+       height: 100%;
+       &:hover {
+         @include hover;
+     }
+       @include tab {
+          display:none;
+       }
+      }
+   }
+   &_desc {
+      padding:0 10px;
+      @include tab {
+          padding:0 20px 60px;
+      }
+   h3 {
+     margin:35px 0;
+     font-size:3rem;
+     font-weight: bold;
+     text-align:center;
+     min-width:225px;
+    }
+    h4 {
+       text-align:right;
+       margin-top:35px;
+       @include tab {
+           margin-top:20px;
+       }
+    }
+  }
+}

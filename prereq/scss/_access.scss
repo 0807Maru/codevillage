@@ -1,0 +1,49 @@
+.access {
+   background: linear-gradient(180deg, $gray 0%, $gray 40%, $beige 40%, $beige 90%, $gray 90%, $gray 100%);
+   position:relative;
+   @include tab {
+      background: linear-gradient(180deg, $gray 0%, $gray 40%, $beige 40%, $beige 92.6%, $gray 92.6%, $gray 100%);
+   }
+}
+.access-wrap {
+   display:flex;
+   @include tab {
+       flex-direction:column;
+       flex-flow:column-reverse;
+   }
+}
+.access-detail {
+   margin:100px 0;
+   @include tab {
+       margin:30px 0 60px;
+   }
+   h2 {
+     color:#00000038;
+     font-size: 2.4rem;
+     font-weight: bold;
+   }
+   p:first-of-type {
+    margin-top:30px;
+ }
+   p {
+     margin-top:25px;
+     color:white;
+   }
+}
+.map {
+   position:absolute;
+   top:40%;
+   right:0%;
+   @include tab {
+      position:static;
+      margin-right: calc(50% - 50vw);
+         margin-left: calc(50% - 50vw);
+   }
+   &-v {
+      width:60vw;
+      height:406.5px;
+      @include tab {
+         width:99%;
+      }
+   }
+}

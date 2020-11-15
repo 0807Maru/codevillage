@@ -1,0 +1,69 @@
+.first-v {
+  height:800px;
+  @include tab {
+    margin-bottom:110px;
+  }
+  &_wrap {
+    height:100%;
+    width:45.6vw;
+    @include tab {
+      width:100%;
+      position:relative;
+    }
+  }
+   &_img {
+     background-image: url(../img/bw1.png);
+     background-size: cover;
+     width:53vw;
+     position:absolute;
+     height:800px;
+     top:0;
+     right:0;
+     @include tab {
+        width:100vw;
+        top:110px;
+      }
+   }
+}
+.first-v_copy {
+  font-size: 3.8rem;
+  padding:50% 0;
+  @include tab {
+    padding:0;
+    position: absolute;
+    top:40%;
+    left:28%;
+    color:#fff;
+    z-index:10;
+    position: absolute;
+    top:55%;
+    left:50%;
+    transform:translate(-50%, 0);
+    display:flex;
+    flex-direction:column-reverse;
+    align-items:center;
+  }
+    &_1 {
+       text-align: center;
+       font-family: $mincho;
+       letter-spacing: 0.5rem;
+       @include tab {
+          margin-top:50px;
+       }
+    }
+    &_2 {
+      margin-top:50px;
+      min-width:438px;
+      font-size: 5.5rem;
+      text-align: center;
+      font-family: "Segoe Script";
+      @include tab {
+         margin:0;
+      }
+    }
+}
+.open {
+   .first-v_copy {
+      z-index:0;        // .ham-menu時に隠すため
+   }
+}
